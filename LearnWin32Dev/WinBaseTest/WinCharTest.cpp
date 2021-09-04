@@ -5,14 +5,14 @@ using namespace std;
 
 void C_char() {
 	const char* pszText = "Hello char.";
-	int len = strlen(pszText);
+	int len = static_cast<int>(strlen(pszText));
 	printf("%s %d\n", pszText, len);
 	return;
 }
 
 void W_char() {
 	const wchar_t* pszText = L"Hello wchar.";
-	int len = wcslen(pszText);
+	int len = static_cast<int>(wcslen(pszText));
 	wprintf(L"%s %d\n", pszText, len);
 	return;
 }
